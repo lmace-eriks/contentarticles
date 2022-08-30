@@ -1,0 +1,147 @@
+.articlesContainer * {
+    box-sizing: border-box;
+}
+
+.articlesContainer {
+    margin: 1rem 0;
+}
+
+.articlesWrapper {
+    display: grid;
+    /* 65% is tied to code inside the app. Do not change without adjusting - LM */
+    grid-template-columns: 65% 1fr;
+    margin: 0 auto;
+}
+
+.featuredContainer {
+    border: 1px solid black;
+    border-right: none;
+}
+
+.featuredFigure {
+    position: relative;
+    margin: 0;
+}
+
+.featuredTextContainer {
+    position: absolute;
+    inset: auto 0 0 0;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.featuredTitle {
+    margin: 0;
+}
+
+.featuredSummary {
+    font-size: 1rem;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listItemContainer {
+    position: relative;
+    display: grid;
+    /* 25% is tied to code inside the app. Do not change without adjusting - LM */
+    grid-template-columns: 25% 1fr;
+    flex: 1;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+    cursor: pointer;
+}
+
+.listItemContainer:first-child {
+    border-top: 1px solid black;
+}
+
+.listItemImg {
+    background-size: cover;
+    background-position: center;
+}
+
+.listItemText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.listItemTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.listItemSummary {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.image {
+    height: 50vh;
+    max-height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    background-color: black;
+}
+
+.featuredLink {
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+.featuredLink:hover .featuredTitle {
+    text-decoration: underline;
+}
+
+.activePost {
+    outline: 4px solid #ec1d24;
+    z-index: 1;
+    border: 1px solid transparent;
+}
+
+.navArrowContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inset: 0;
+}
+
+/* Mobile Rules - LM */
+@media (max-width: 1025px) {
+    .articlesWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featuredContainer {
+        width: 100%;
+    }
+
+    .listContainer {
+        display: none;
+        width: 100%;
+    }
+
+}

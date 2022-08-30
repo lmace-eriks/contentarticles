@@ -1,7 +1,7 @@
 {
   "vendor": "eriksbikeshop",
   "name": "contentarticles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "ContentArticles",
   "description": "ContentArticles component",
   "defaultLocale": "pt-BR",
